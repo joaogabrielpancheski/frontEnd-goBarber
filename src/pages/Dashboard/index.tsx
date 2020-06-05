@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPower, FiClock } from 'react-icons/fi';
 
 import { useAuth } from '../../hooks/auth';
@@ -13,10 +13,14 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
   Calendar,
 } from './styles';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -63,6 +67,94 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/32856374?s=460&u=de0dd39ff212623a025de9a1cf3b8c01d0631a89&v=4"
+                  alt="João Gabriel P."
+                />
+
+                <strong>João Gabriel P.</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/32856374?s=460&u=de0dd39ff212623a025de9a1cf3b8c01d0631a89&v=4"
+                  alt="João Gabriel P."
+                />
+
+                <strong>João Gabriel P.</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/32856374?s=460&u=de0dd39ff212623a025de9a1cf3b8c01d0631a89&v=4"
+                  alt="João Gabriel P."
+                />
+
+                <strong>João Gabriel P.</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/32856374?s=460&u=de0dd39ff212623a025de9a1cf3b8c01d0631a89&v=4"
+                  alt="João Gabriel P."
+                />
+
+                <strong>João Gabriel P.</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars2.githubusercontent.com/u/32856374?s=460&u=de0dd39ff212623a025de9a1cf3b8c01d0631a89&v=4"
+                  alt="João Gabriel P."
+                />
+
+                <strong>João Gabriel P.</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
 
         <Calendar />
